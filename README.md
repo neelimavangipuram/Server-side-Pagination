@@ -11,11 +11,9 @@
 ###### Endpoints -
 1. Get all the Users' Data
     - GET request - http://localhost:1984/transaction/getalldocs
-    - [Get All Users](http://localhost:1984/transaction/getalldocs)
     
 2. Server side pagination, sorting and filtering 
     - POST request -  http://localhost:1984/transaction/getselected
-    - [Pagination_Sort_Filter](http://localhost:1984/transaction/getselected)
     - Example
          ```
         {
@@ -36,9 +34,9 @@
     - [Add Record](http://localhost:1984/transaction/adddoc)
 
 4. To get a unique record by its id (To test if a record is successfully inserted)
-    - GET request - http://localhost:1984/transaction/getdocid?id=<enter id here>
+    - GET request - http://localhost:1984/transaction/getdocid?id=enter_id_here
     - Example - http://localhost:1984/transaction/getdocid?id=4715
 
 ###### Output Screenshots
 1. Get all Users' data 
-    - ![Get all Users Data](https://github.com/neelimavangipuram/Server-side-Pagination/blob/master/images/getalldocs.png "Get All Data")
+    - ![Get all Users Data](https://github.com/neelimavangipuram/Server-side-Pagination/blob/master/images/getalldocs.png =250x250)
