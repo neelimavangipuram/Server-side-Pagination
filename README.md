@@ -39,4 +39,4 @@
 
 ###### Output Screenshots
 1. Get all Users' data 
-    - ![Get all Users Data](https://github.com/neelimavangipuram/Server-side-Pagination/blob/master/images/getalldocs.png =250x250)
+    - Get All Users Data<img src="https://github.com/neelimavangipuram/Server-side-Pagination/blob/master/images/getalldocs.png" width="100" height="100">
