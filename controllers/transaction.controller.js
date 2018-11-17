@@ -68,39 +68,42 @@ function chunk_array(big_array, chunk_size) {
 }
 
 function get_selected(req, res, next) {
-    var txns = JSON.parse(fs.readFileSync(config.DATA_PATH, 'utf8'));
     var req_body = req.body;
+    fs.readFile(config.DATA_PATH, "utf8", function (err, data) {
+        if (err) return next(new Error('Data source can\'t be found!'));
 
-    if (
-        !req_body.page_no ||
-        !req_body.page_size
-    ) {
-        return next(new Error('Page information not available'));
-    }
+        var txns = JSON.parse(data);
+        if (
+            !req_body.page_no ||
+            !req_body.page_size
+        ) {
+            return next(new Error('Page information not available'));
+        }
 
-    // step 1: apply filters
-    if (req_body.filter && req_body.filter.length > 3) {
-        return next(new Error('Number of filters have exceeded the allowed limit'));
-    }
-    var filtered_txns = apply_filter(txns, req_body.filter);
+        // step 1: apply filters
+        if (req_body.filter && req_body.filter.length > 3) {
+            return next(new Error('Number of filters have exceeded the allowed limit'));
+        }
+        var filtered_txns = apply_filter(txns, req_body.filter);
 
-    // step 2: apply sorting}
-    var sort_keys = _.keys(req_body.sort);
-    var sort_values = _.values(req_body.sort);
-    if (sort_keys > 3) {
-        next(new Error('Number of sorts have exceeded the allowed limit'));
-    }
-    var sorted_txns = _.orderBy(filtered_txns, sort_keys, sort_values);
+        // step 2: apply sorting
+        var sort_keys = _.keys(req_body.sort);
+        var sort_values = _.values(req_body.sort);
+        if (sort_keys.length > 3) {
+            next(new Error('Number of sorts have exceeded the allowed limit'));
+        }
+        var sorted_txns = _.orderBy(filtered_txns, sort_keys, sort_values);
 
-    // step 3: paginate and return requested page
-    var page_no = req_body.page_no - 1;
-    var page_size = req_body.page_size;
-    var split_array = chunk_array(sorted_txns, page_size);
-    if (page_no > -1 && page_no < split_array.length) {
-        return res.send(split_array[page_no]);
-    }
+        // step 3: paginate and return requested page
+        var page_no = req_body.page_no - 1;
+        var page_size = req_body.page_size;
+        var split_array = chunk_array(sorted_txns, page_size);
+        if (page_no > -1 && page_no < split_array.length) {
+            return res.send(split_array[page_no]);
+        }
 
-    return next(new Error('Invalid page requested'));
+        return next(new Error('Invalid page requested'));
+    });
 
 }
 
