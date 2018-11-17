@@ -1,6 +1,6 @@
 # Server-side Pagination, Filtering and Sorting
 
-###### Implemented a Node.js application to -
+###### A Node.js application to -
 1. Return all the data given in the sample.json file.
 2. Implement server side pagination, sorting and filtering with a maximum of 3 sorts and filters. 
 3. Save a new record to the sample JSON file. 
