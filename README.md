@@ -8,6 +8,10 @@
 ###### Assumptions and Limitations - 
 1. The fields id and email are unique to a user, hence can't be added to the JSON file.
 
+###### Instructions -
+1. sudo npm install - to install all the dependencies.
+2. Run the application on a browser/Postman - http://localhost:1984/transaction/enter_endpoints_here
+
 ###### Endpoints -
 1. Get all the Users' Data
     - GET request - http://localhost:1984/transaction/getalldocs
