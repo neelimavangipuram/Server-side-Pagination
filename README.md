@@ -29,7 +29,7 @@
                 {"field":"age", "operator":"GREATERTHAN", "value":20}
                 ]
         }
-            ```
+        
     
 3. Save new record to the sample JSON file 
     - POST request - http://localhost:1984/transaction/adddoc
@@ -41,4 +41,4 @@
 
 ###### Output Screenshots
 1. Get all Users' data 
-    - ![Get all Users Data](https://github.com/neelimavangipuram/Server-side-Pagination/images/getalldocs.png?raw=true "Get All Data")
+    - ![Get all Users Data](https://github.com/neelimavangipuram/Server-side-Pagination/blob/master/images/getalldocs.png "Get All Data")
