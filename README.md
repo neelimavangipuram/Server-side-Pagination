@@ -18,9 +18,11 @@
          ```
         {
             "page_no" : 1,
-            "page_size" : 1000,
+            "page_size" : 10,
             "sort" : {
-                "first_name" : "asc"
+                "id":"desc",
+                "first_name" : "asc",
+                "last_name":"desc",
             },
             "filter": [
                 {"field":"last_name", "operator":"CONTAINS", "value":"Van"},
@@ -39,5 +41,5 @@
 ###### Output Screenshots
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
-|<img width="1604" src="https://github.com/neelimavangipuram/Server-side-Pagination/blob/master/images/getalldocs.png">  Get All Users' Data |  <img width="1604" src="https://github.com/neelimavangipuram/Server-side-Pagination/blob/master/images/pagination.png"> Pagination |<img width="1604" src="https://github.com/neelimavangipuram/Server-side-Pagination/blob/master/images/adddoc.png"> Add New Record |
+|<img width="1604" src="https://github.com/neelimavangipuram/Server-side-Pagination/blob/master/images/getalldocs.png">  Get All Users' Data |  <img width="1604" src="https://github.com/neelimavangipuram/Server-side-Pagination/blob/master/images/pagination.png"> Filtering |<img width="1604" src="https://github.com/neelimavangipuram/Server-side-Pagination/blob/master/images/adddoc.png"> Add New Record |
 |<img width="1604" src="https://github.com/neelimavangipuram/Server-side-Pagination/blob/master/images/newrecord.png"> JSON file |  <img width="1604" src="https://github.com/neelimavangipuram/Server-side-Pagination/blob/master/images/recordexists.png"> Record Exists |<img width="1604" src="https://github.com/neelimavangipuram/Server-side-Pagination/blob/master/images/getdocid.png"> Get Record by ID |
