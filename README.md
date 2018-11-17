@@ -31,12 +31,14 @@
     
 3. Save new record to the sample JSON file 
     - POST request - http://localhost:1984/transaction/adddoc
-    - [Add Record](http://localhost:1984/transaction/adddoc)
 
 4. To get a unique record by its id (To test if a record is successfully inserted)
     - GET request - http://localhost:1984/transaction/getdocid?id=enter_id_here
     - Example - http://localhost:1984/transaction/getdocid?id=4715
 
 ###### Output Screenshots
-1. Get all Users' data 
-    - Get All Users Data<img src="https://github.com/neelimavangipuram/Server-side-Pagination/blob/master/images/getalldocs.png" width="100" height="100">
+| | | |
+|:-------------------------:|:-------------------------:|:-------------------------:|
+|<img width="1604" src="https://github.com/neelimavangipuram/Server-side-Pagination/blob/master/images/getalldocs.png">  Get All Users' Data |  <img width="1604" src="https://github.com/neelimavangipuram/Server-side-Pagination/blob/master/images/pagination.png"> Pagination |<img width="1604" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png">|
+|<img width="1604" src="https://github.com/neelimavangipuram/Server-side-Pagination/blob/master/images/adddoc.png">  Add New Record |  <img width="1604" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png">|<img width="1604" src="https://github.com/neelimavangipuram/Server-side-Pagination/blob/master/images/newrecord.png"> JSON file |
+|<img width="1604" src="https://github.com/neelimavangipuram/Server-side-Pagination/blob/master/images/recordexists.png">  Record Exists|  <img width="1604" src="https://github.com/neelimavangipuram/Server-side-Pagination/blob/master/images/getdocid.png"> Get Record by ID|
